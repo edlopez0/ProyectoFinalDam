@@ -31,7 +31,7 @@ class DBDrawerFiveButtons extends StatelessWidget {
           Padding(padding: EdgeInsets.only(bottom: 100)),
           Column(
             children: [
-              botonesDrawer(Icons.account_box, "Mi cuenta", bClickUsuario, Colors.yellowAccent),
+              botonesDrawer(Icons.account_box, "Mi cuenta", bClickUsuario, Colors.black87),
               botonesDrawer(Icons.add_a_photo_rounded, "Añadir foto", bClickFoto, Colors.blue),
               botonesDrawer(Icons.settings, "Configuración", bClickSettings, Colors.green),
               botonesDrawer(Icons.help_outline, "Ayuda", bClickHelp, Colors.orange),

@@ -44,7 +44,7 @@ class HomeView extends StatelessWidget {
                 CustomContainer(color: Colors.green, text: 'POMODORO', route: '/pomodoro'),
                 CustomContainer(color: Colors.orange, text: 'CALCULAR ÍNDICE', route: '/indice'),
                 CustomContainer(color: Colors.purple, text: 'FRASE', route: '/frase'),
-                CustomContainer(color: Colors.yellow, text: 'OTRO', route: '/otro'),
+                CustomContainer(color: Colors.cyan, text: 'OTRO', route: '/perfil'),
               ],
             ),
           ),
@@ -59,14 +59,13 @@ class HomeView extends StatelessWidget {
       ),
        drawer: DBDrawerFiveButtons(
           bClickClose: (){
-            Navigator.pop(context);
+            Navigator.popAndPushNamed(context, '/subirfoto');
           },
           bClickUsuario: () {
             Navigator.pop(context);
           },
           bClickFoto: () {
-            Navigator.pop(context);
-          },
+            Navigator.popAndPushNamed(context, '/subirfoto');          },
           bClickSettings: () {
             Navigator.pop(context);
           },

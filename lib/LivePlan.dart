@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:proyecto_final/Main/HomeView.dart';
+import 'package:proyecto_final/Main/SubirImagen.dart';
 import 'package:proyecto_final/Main/Temporizador.dart';
 
+import 'FirestoreObjects/PerfilUsuario.dart';
 import 'Main/PlanificacionSemanal.dart';
 import 'Main/Pomodoro.dart';
 import 'OnBoarding/LoginView.dart';
@@ -40,7 +42,8 @@ class LivePlan extends StatelessWidget {
           '/pomodoro': (context) =>HomeScreen(),
           '/temporizador': (context) => Temporizador(),
           '/tareas' : (context) => PlanificacionSemanal(),
-
+          '/subirfoto': (context) => SubirImagen(),
+          '/perfil': (context) => PerfilUsuario(),
 
           /*              CustomContainer(color: Colors.red, text: 'SALUD', route: '/salud'),
                 CustomContainer(color: Colors.blue, text: 'TAREAS DIARIAS', route: '/tareas'),
