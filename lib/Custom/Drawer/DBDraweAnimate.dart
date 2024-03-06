@@ -52,7 +52,7 @@ class _DBDraweAnimateState extends State<DBDraweAnimate> with SingleTickerProvid
                   color: Colors.white,
                 ),
       DBBotonIcon(icon: Icons.add,name: "Cerrar",
-          textColor: Colors.black,iconColor: Colors.black,fontSize: 14,paddingRight: 8),
+          textColor: Colors.black,iconColor: Colors.black,fontSize: 14,paddingRight: 8, onPressed: () {  },),
 
 
     ],

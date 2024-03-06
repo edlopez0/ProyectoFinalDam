@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DBBotonIcon extends StatelessWidget {
+  late VoidCallback onPressed;
   final IconData icon;
   final String name;
   final Color textColor;
@@ -16,14 +17,13 @@ class DBBotonIcon extends StatelessWidget {
     this.iconColor = Colors.black,
     this.fontSize = 14,
     this.paddingRight = 8,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: () {
-        // Acción del botón
-      },
+      onPressed: onPressed,
       icon: Icon(
         icon,
         color: iconColor,
@@ -39,7 +39,7 @@ class DBBotonIcon extends StatelessWidget {
         ),
       ),
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.blue, primary: Colors.transparent, // Color del efecto ripple
+        foregroundColor: Colors.blue, backgroundColor: Colors.transparent, // Color del efecto ripple
         shadowColor: Colors.transparent, // Sin sombra
         elevation: 0, // Sin elevación
       ),

@@ -8,8 +8,6 @@ class FbUsuario{
   final String sexo;
   final String peso;
   final String email;
-  final String telefono;
-  final String direccion;
   final String ciudad;
   final String fotoPerfil;
 
@@ -23,8 +21,6 @@ class FbUsuario{
     required this.sexo,
     required this.peso,
     required this.email,
-    required this.telefono,
-    required this.direccion,
     required this.ciudad,
     required this.fotoPerfil,
 
@@ -45,8 +41,6 @@ class FbUsuario{
       sexo: data?['sexo']!=null? data!['sexo']:"sin asignar",
       peso: data?['peso']!=null? data!['peso']:"sin asignar",
       email: data?['email']!=null? data!['email']:"sin asignar",
-      telefono: data?['telefono']!=null? data!['telefono']:"sin asignar",
-      direccion: data?['direccion']!=null? data!['direccion']:"sin asignar",
       ciudad: data?['ciudad']!=null? data!['ciudad']:"sin asignar",
       fotoPerfil: data?['fotoPerfil']!=null? data!['fotoPerfil']:'assets/images/fotoPerfilPorDefecto.png',
 
@@ -63,8 +57,6 @@ class FbUsuario{
       if(sexo!=null) "sexo":sexo,
       if(peso!=null) "peso":peso,
       if(email!=null) "email":email,
-      if(telefono!=null) "telefono":telefono,
-      if(direccion!=null) "direccion":direccion,
       if(ciudad!=null) "ciudad":ciudad,
       if(fotoPerfil!=null) "fotoPerfil":fotoPerfil,
 

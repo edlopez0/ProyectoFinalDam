@@ -42,8 +42,8 @@ class LivePlan extends StatelessWidget {
           '/pomodoro': (context) =>HomeScreen(),
           '/temporizador': (context) => Temporizador(),
           '/tareas' : (context) => PlanificacionSemanal(),
-          '/subirfoto': (context) => SubirImagen(),
-          '/perfil': (context) => PerfilUsuario(),
+          '/subirfoto': (context) => SubirImagenPerfil(),
+          '/perfilview': (context) => PerfilUsuario(),
 
           /*              CustomContainer(color: Colors.red, text: 'SALUD', route: '/salud'),
                 CustomContainer(color: Colors.blue, text: 'TAREAS DIARIAS', route: '/tareas'),
@@ -52,7 +52,7 @@ class LivePlan extends StatelessWidget {
                 CustomContainer(color: Colors.purple, text: 'FRASE', route: '/frase'),
                 CustomContainer(color: Colors.yellow, text: 'OTRO', route: '/otro'),*/
         },
-        initialRoute: '/homeview',
+        initialRoute: '/splashview',
 
       );
     }

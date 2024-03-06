@@ -20,6 +20,7 @@ class RegistroView extends StatelessWidget {
   void registrarMovil() {
     Navigator.of(_context).pushNamed('/phoneverifica');
   }
+  //verificacion de datos passwors conciden
   void botonRegistrar() async {
     if(tecPass.text==tecRepass.text){
     try {

@@ -14,12 +14,11 @@ class PerfilUsuario extends StatelessWidget {
   TextEditingController tecAltura = TextEditingController();
   TextEditingController tecPais = TextEditingController();
   TextEditingController tecCiudad = TextEditingController();
-  TextEditingController tecDireccion = TextEditingController();
   TextEditingController tecEmail = TextEditingController();
   TextEditingController tecFotoPerfil = TextEditingController();
   TextEditingController tecPeso = TextEditingController();
   TextEditingController tecSexo = TextEditingController();
-  TextEditingController tecTelefono = TextEditingController();
+
 
   FirebaseFirestore db = FirebaseFirestore.instance;
 
@@ -31,20 +30,17 @@ class PerfilUsuario extends StatelessWidget {
         altura: double.parse(tecAltura.text),
         pais: tecPais.text,
         ciudad: tecCiudad.text,
-        direccion: tecDireccion.text,
         email: tecEmail.text,
         fotoPerfil: tecFotoPerfil.text,
         peso: tecPeso.text,
         sexo: tecSexo.text,
-        telefono: tecTelefono.text
-
     );
 
     // Obtiene el ID del usuario actual para vincular los datos del perfil
     String uidUsuario = FirebaseAuth.instance.currentUser!.uid;
 
     // Guarda los datos del usuario en Firestore bajo la colección "Usuarios" con el ID del usuario actual
-    await db.collection("Usuarios").doc(uidUsuario).set(usuario.toFirestore());
+    await db.collection("usuarios").doc(uidUsuario).set(usuario.toFirestore());
 
     // Navega al view 'homeview' tras guardar los datos
     Navigator.of(_context).pushNamed('/homeview');

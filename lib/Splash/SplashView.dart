@@ -36,7 +36,7 @@ class _SplashViewState extends State<SplashView> {
     //el uid  lo asignavos a variable uid
     String uid=FirebaseAuth.instance.currentUser!.uid;
     //referencia  de en que parte de base datos se encuentra
-    DocumentReference<FbUsuario> referencia=db.collection("Usuarios")
+    DocumentReference<FbUsuario> referencia=db.collection("usuarios")
         .doc(uid)
     //como lo quiero descargar
         .withConverter
