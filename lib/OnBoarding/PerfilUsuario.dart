@@ -5,7 +5,7 @@ import '../Custom/SCAppBar.dart';
 import '../Custom/SCText.dart';
 import '../Custom/SCTextField.dart';
 import '../Custom/TextField/DBTextFielsBasic.dart';
-import 'FbUsuario.dart';
+import '../FirestoreObjects/FbUsuario.dart';
 
 class PerfilUsuario extends StatelessWidget {
   late BuildContext _context;

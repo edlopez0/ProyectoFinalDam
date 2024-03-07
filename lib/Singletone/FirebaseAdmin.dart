@@ -20,7 +20,7 @@ class FirebaseAdmin {
   Future<FbUsuario?> descargarUsuario(String userId) async {
     var refUsuario = FirebaseFirestore.instance.collection("usuarios")
         .doc(
-        userId) // Asume que userId es el identificador del documento para el usuario
+        userId)
         .withConverter<FbUsuario>(
       fromFirestore: FbUsuario.fromFirestone,
       toFirestore: (FbUsuario usuario, _) => usuario.toFirestore(),
@@ -99,6 +99,15 @@ class FirebaseAdmin {
       print('Error al obtener la ruta de la foto de perfil: $e');
       return null;
     }
+  }
+
+  Future<void> actualizarEstadoTarea(String idTarea, bool nuevoEstado) async {
+    await FirebaseFirestore.instance.collection('tareas').doc(idTarea).update({
+      'completada': nuevoEstado,
+    });
+  }
+  Future<void> eliminarTarea(String idTarea) async {
+    await FirebaseFirestore.instance.collection('tareas').doc(idTarea).delete();
   }
 
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:proyecto_final/Main/Gyfs.dart';
 import 'package:proyecto_final/Main/HomeView.dart';
+import 'package:proyecto_final/Main/ListaTareasDiarias.dart';
 import 'package:proyecto_final/Main/SubirImagen.dart';
 import 'package:proyecto_final/Main/Temporizador.dart';
 
-import 'FirestoreObjects/PerfilUsuario.dart';
+import 'OnBoarding/PerfilUsuario.dart';
 import 'Main/PlanificacionSemanal.dart';
 import 'Main/Pomodoro.dart';
 import 'OnBoarding/LoginView.dart';
@@ -39,12 +41,13 @@ class LivePlan extends StatelessWidget {
           '/phoneverifica' : (context) => PhoneLoginView(),
           '/splashview': (context) => SplashView(),
           '/homeview': (context) => HomeView(),
-          '/pomodoro': (context) =>HomeScreen(),
+          '/pomodoro': (context) =>Pomodoro(),
           '/temporizador': (context) => Temporizador(),
           '/tareas' : (context) => PlanificacionSemanal(),
           '/subirfoto': (context) => SubirImagenPerfil(),
           '/perfilview': (context) => PerfilUsuario(),
-
+          '/tareasdiarias'  : (context) => ListaTareasDiarias(),
+          '/viewgif' : (context) => Gyfs(),
           /*              CustomContainer(color: Colors.red, text: 'SALUD', route: '/salud'),
                 CustomContainer(color: Colors.blue, text: 'TAREAS DIARIAS', route: '/tareas'),
                 CustomContainer(color: Colors.green, text: 'POMODORO', route: '/pomodoro'),

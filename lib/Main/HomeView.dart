@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto_final/Custom/Drawer/DBDraweAnimate.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:proyecto_final/Singletone/DataHolder.dart';
-
 import '../Custom/Drawer/DBDraweFiveButtons.dart';
 import '../FirestoreObjects/FbUsuario.dart';
-
 
 class HomeView extends StatefulWidget {
 
@@ -12,11 +10,25 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
+
 class _HomeViewState extends State<HomeView> {
+
+  @override
+  void initState() {
+    super.initState();
+    cargarLocalizacion();
+
+
+  }
+
+  void  cargarLocalizacion() async{
+    Position pocicion= await DataHolder().geolocatorAdmin.obtenerPosition();
+    print("GEOLOCATOR====su pocicion actual es : "+pocicion.toString());
+  }
+
+
   @override
   Widget build(BuildContext context) {
-
-
 
     void clickClose(){
       Navigator.pop(context);
@@ -116,23 +128,18 @@ class _HomeViewState extends State<HomeView> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.refresh),
             onPressed: () {
               // Acción al pulsar el icono de configuración
             },
           ),
           IconButton(
-            icon: Icon(Icons.favorite),
+            icon: Icon(Icons.settings),
             onPressed: () {
               // Acción al pulsar el icono de favorito
             },
           ),
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Acción al pulsar el icono de búsqueda
-            },
-          ),
+
         ],
       ),
 
@@ -147,7 +154,7 @@ class _HomeViewState extends State<HomeView> {
                 CustomContainer(color: Colors.green, text: 'POMODORO', route: '/pomodoro'),
                 CustomContainer(color: Colors.orange, text: 'CALCULAR ÍNDICE', route: '/indice'),
                 CustomContainer(color: Colors.purple, text: 'FRASE', route: '/frase'),
-                CustomContainer(color: Colors.cyan, text: 'OTRO', route: '/perfil'),
+                CustomContainer(color: Colors.cyan, text: 'Gyfs', route: '/viewgif'),
               ],
             ),
           ),

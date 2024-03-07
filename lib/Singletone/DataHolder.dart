@@ -2,6 +2,8 @@
 
 import '../FirestoreObjects/FbUsuario.dart';
 import 'FirebaseAdmin.dart';
+import 'GeolocatorAdmin.dart';
+import 'HttpAdmin.dart';
 
 //creacion  de  clase estatica
 class DataHolder{
@@ -14,8 +16,10 @@ class DataHolder{
   //descargas
   FirebaseAdmin firebaseAdmin=FirebaseAdmin();
   //geolocator
-  //GeolocatorAdmin geolocatorAdmin=GeolocatorAdmin();
+  GeolocatorAdmin geolocatorAdmin=GeolocatorAdmin();
   //FirebaseFirestore db = FirebaseFirestore.instance;
+  //gestiona todas las apis
+  HttpAdmin adminHttp=HttpAdmin();
 
   DataHolder._internal(){
     textoBar="data holder ";

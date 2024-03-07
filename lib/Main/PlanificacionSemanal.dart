@@ -5,8 +5,16 @@ import '../Custom/CustomButton.dart';
 
 
 class PlanificacionSemanal extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    planificacionSemanal() {
+      print('Planificación Semanal');
+      Navigator.pushNamed(context, '/tareasdiarias');
+    }
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Tareas Semanales'),
@@ -43,12 +51,9 @@ class PlanificacionSemanal extends StatelessWidget {
           children: [
             SizedBox(height: 30),
             CustomButton(
-              onPressed: () {
-                // Acción al pulsar el botón
-                print('Botón 1 pulsado');
-              },
+              onPressed: planificacionSemanal,
               buttonText: 'Botón 1',
-              overlayImage: 'resources/images/lunes.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Lunes', // Ruta de la imagen
             ),
             SizedBox(height: 20),
             CustomButton(
@@ -57,7 +62,7 @@ class PlanificacionSemanal extends StatelessWidget {
                 print('Botón 2 pulsado');
               },
               buttonText: 'Botón 2',
-              overlayImage: 'resources/images/martes.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Martes', // Ruta de la imagen
             ),
             SizedBox(height: 20),
             CustomButton(
@@ -66,7 +71,7 @@ class PlanificacionSemanal extends StatelessWidget {
                 print('Botón 2 pulsado');
               },
               buttonText: 'Botón 2',
-              overlayImage: 'resources/images/fondoLogin.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Miércoles', // Ruta de la imagen
             ),
             SizedBox(height: 20),
             CustomButton(
@@ -75,7 +80,7 @@ class PlanificacionSemanal extends StatelessWidget {
                 print('Botón 2 pulsado');
               },
               buttonText: 'Botón 2',
-              overlayImage: 'resources/images/fondoLogin.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Jueves', // Ruta de la imagen
             ),
             SizedBox(height: 20),
             CustomButton(
@@ -84,7 +89,16 @@ class PlanificacionSemanal extends StatelessWidget {
                 print('Botón 2 pulsado');
               },
               buttonText: 'Botón 2',
-              overlayImage: 'resources/images/fondoLogin.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Viernes', // Ruta de la imagen
+            ),
+            const SizedBox(height: 20),
+            CustomButton(
+              onPressed: () {
+                // Acción al pulsar el botón
+                print('Botón 2 pulsado');
+              },
+              buttonText: 'Botón 2',
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Sábado', // Ruta de la imagen
             ),
             SizedBox(height: 20),
             CustomButton(
@@ -93,16 +107,7 @@ class PlanificacionSemanal extends StatelessWidget {
                 print('Botón 2 pulsado');
               },
               buttonText: 'Botón 2',
-              overlayImage: 'resources/images/fondoLogin.jpeg', // Ruta de la imagen
-            ),
-            SizedBox(height: 20),
-            CustomButton(
-              onPressed: () {
-                // Acción al pulsar el botón
-                print('Botón 2 pulsado');
-              },
-              buttonText: 'Botón 2',
-              overlayImage: 'resources/images/fondoLogin.jpeg', // Ruta de la imagen
+              overlayImage: 'resources/images/fondo2.jpg', diasemana: 'Domingo', // Ruta de la imagen
             ),
           ],
         ),

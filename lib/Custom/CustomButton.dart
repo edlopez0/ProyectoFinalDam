@@ -5,16 +5,19 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String buttonText;
   final String overlayImage;
+  final String diasemana;
 
   const CustomButton({
     required this.onPressed,
     required this.buttonText,
     required this.overlayImage,
+    required this.diasemana,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+
       onTap: onPressed,
       child: Stack(
         alignment: Alignment.center,
@@ -36,8 +39,11 @@ class CustomButton extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-        ],
-      ),
+
+          Text(diasemana, style: TextStyle(color: Colors.red, fontSize: 30)),
+    ],
+    ),
     );
+
   }
 }

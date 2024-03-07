@@ -9,12 +9,12 @@ import '../Custom/ButtonStyleOne.dart';
 
 
 
-class HomeScreen extends StatefulWidget {
+class Pomodoro extends StatefulWidget {
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Pomodoro> createState() => _PomodoroState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _PomodoroState extends State<Pomodoro> {
 
   bool isHovered = false; // Estado para controlar si se pasa por encima
   @override
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         backgroundColor: Colors.teal,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.home_filled),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -37,40 +37,29 @@ class _HomeScreenState extends State<HomeScreen> {
               // Acción al pulsar el icono de configuración
             },
           ),
-          IconButton(
-            icon: Icon(Icons.favorite),
-            onPressed: () {
-              // Acción al pulsar el icono de favorito
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Acción al pulsar el icono de búsqueda
-            },
-          ),
+
         ],
       ),
       body: Center(
-        child: CountdownTimer(),
+        child: PomodoroTimer(),
       ),
     );
   }
 }
 
-class CountdownTimer extends StatefulWidget {
+class PomodoroTimer extends StatefulWidget {
   @override
-  _CountdownTimerState createState() => _CountdownTimerState();
+  _PomodoroTimerState createState() => _PomodoroTimerState();
 }
 
-class _CountdownTimerState extends State<CountdownTimer> {
+class _PomodoroTimerState extends State<PomodoroTimer> {
   Timer? _timer;
   int hours = 0;
   int minutes = 0;
   int seconds = 0;
   int _totalSeconds;
 
-  _CountdownTimerState() : _totalSeconds = 0; // Inicializa _totalSeconds
+  _PomodoroTimerState() : _totalSeconds = 0; // Inicializa _totalSeconds
 
   void iniicia() {
     // Calcula el total de segundos a partir de horas, minutos y segundos
@@ -119,7 +108,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
       },
     );
   }
-
+  // Método para construir un control deslizante para seleccionar horas, minutos o segundos
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -158,7 +147,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
       ],
     );
   }
-
+  // Método para construir un control deslizante para seleccionar horas, minutos o segundos
   Widget buildTimePicker(String label, int value, ValueChanged<int> onChanged) {
     return Column(
       children: [
@@ -171,7 +160,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
             min: 0,
             max: label == 'Hours' ? 24 : 59,
             onChanged: (double newValue) {
-              onChanged(newValue.toInt()); // Corrección aquí
+              onChanged(newValue.toInt());
             },
             divisions: label == 'Hours' ? 24 : 59,
             label: value.toString(),
