@@ -108,6 +108,7 @@ class _ListaTareasDiariasState extends State<ListaTareasDiarias> {
                 firestore.collection('usuarios/$userId/tareas').doc(tarea.id).update({'completada': valor});
               },
             ),
+            //Se mantiene presionado
             onLongPress: () => _eliminarTarea(tarea.id),
           );
         },

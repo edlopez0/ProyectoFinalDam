@@ -123,17 +123,17 @@ class _PomodoroTimerState extends State<PomodoroTimer> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-            buildTimePicker('Hours', hours, (value) {
+            mostrarTimer('Hours', hours, (value) {
               setState(() {
                 hours = value;
               });
             }),
-            buildTimePicker('Minutes', minutes, (value) {
+            mostrarTimer('Minutes', minutes, (value) {
               setState(() {
                 minutes = value;
               });
             }),
-            buildTimePicker('Seconds', seconds, (value) {
+            mostrarTimer('Seconds', seconds, (value) {
               setState(() {
                 seconds = value;
               });
@@ -148,7 +148,7 @@ class _PomodoroTimerState extends State<PomodoroTimer> {
     );
   }
   // Método para construir un control deslizante para seleccionar horas, minutos o segundos
-  Widget buildTimePicker(String label, int value, ValueChanged<int> onChanged) {
+  Widget mostrarTimer(String label, int value, ValueChanged<int> onChanged) {
     return Column(
       children: [
         Text(label),

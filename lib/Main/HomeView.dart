@@ -153,15 +153,15 @@ class _HomeViewState extends State<HomeView> {
                 CustomContainer(color: Colors.blue, text: 'TAREAS DIARIAS', route: '/tareas'),
                 CustomContainer(color: Colors.green, text: 'POMODORO', route: '/pomodoro'),
                 CustomContainer(color: Colors.orange, text: 'CALCULAR ÍNDICE', route: '/indice'),
-                CustomContainer(color: Colors.purple, text: 'FRASE', route: '/frase'),
-                CustomContainer(color: Colors.cyan, text: 'Gyfs', route: '/viewgif'),
+                CustomContainer(color: Colors.purple, text: 'DIETA', route: '/frase'),
+                CustomContainer(color: Colors.cyan, text: 'OTRO', route: '/viewgif'),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Descripción: Aquí encontrarás herramientas para mejorar tu salud, gestionar tareas diarias, aplicar la técnica Pomodoro, calcular índices y obtener inspiración con frases motivadoras.',
+              'Descripción: Aquí encontrarás herramientas para mejorar TU VIDA',
               style: TextStyle(fontSize: 16),
             ),
           ),
